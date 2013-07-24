@@ -15,7 +15,7 @@ var (
 
 func init() {
 	http.HandleFunc("/", indexHandler)
-	http.HandleFunc("/login", loginHandler)
+	http.HandleFunc("/example", exampleHandler)
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
@@ -30,7 +30,7 @@ type User struct {
 	Pwd string
 }
 
-func loginHandler(w http.ResponseWriter, r *http.Request) {
+func exampleHandler(w http.ResponseWriter, r *http.Request) {
 	id := r.PostFormValue("id")
 	pwd := r.PostFormValue("pwd")
 	// TODO id, pwd가 ""면 에러 리턴
