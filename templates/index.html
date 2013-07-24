@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form name="frm" method="post" action="/login">
+    <input type="text" name="id">
+    <input type="text" name="pwd">
+    <input type="submit">
+</form>
+<div>
+    {{with .Id}} {{printf "%s" .}} {{end}}
+    {{with .Pwd}} {{printf "%s" .}} {{end}}
+</div>
+</body>
+</html>
