@@ -5,23 +5,23 @@
 package badge
 
 import (
-    "net/http"
-    "text/template"
+	"net/http"
+	"text/template"
 )
 
 var (
-    eventsTmpl *template.Template =
-            template.Must(template.ParseFiles("templates/events.html"))
+	eventsTmpl *template.Template =
+		template.Must(template.ParseFiles("templates/events.html"))
 )
 
 func init() {
-    http.HandleFunc("/events", eventsHandler)
+	http.HandleFunc("/events", eventsHandler)
 }
 
 func eventsHandler(w http.ResponseWriter, r *http.Request) {
-    // Do nothing now...
-    err := eventsTmpl.Execute(w, nil)
-    if err != nil {
-        http.Error(w, err.Error(), http.StatusInternalServerError)
-    }
-}         
+	// Do nothing now...
+	err := eventsTmpl.Execute(w, nil)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
