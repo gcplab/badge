@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SignIn Page</title>
+   </head>
+   <body>
+      SignIn Page
+<div>
+    {{with .Name}} {{printf "%s" .}} {{end}}
+    {{with .ID}} {{printf "%s" .}} {{end}}
+    {{with .Pwd}} {{printf "%s" .}} {{end}}
+    {{with .Email}} {{printf "%s" .}} {{end}}
+</div>
+
+   </body>
+</html>

@@ -1,8 +1,8 @@
 package badge
 
-import{
+import(
 	"time"
-}
+)
 
 type Badge struct{
 	Name string
